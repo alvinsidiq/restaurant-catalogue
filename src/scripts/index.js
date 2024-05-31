@@ -11,12 +11,10 @@ import App from './views/app';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import('lodash.filter')
-  .then((module) => module.default)
-  .then(filterContacts)
+  // .then((module) => module.default)
+  // .then(filterContacts)
   .catch((error) => alert(error));
-  import filter from 'lodash.filter';
-  import $ from 'jquery';
-  import axios from 'axios';
+
   
 const app = new App({
   button: document.querySelector('#menu'),
