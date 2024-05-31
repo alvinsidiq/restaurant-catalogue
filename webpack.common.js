@@ -1,21 +1,18 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable prefer-regex-literals */
+/* eslint-disable prefer-destructuring */
+/* eslint-disable indent */
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable implicit-arrow-linebreak */
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const path = require('path');
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+// const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
-const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
-// eslint-disable-next-line prefer-destructuring
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
-    // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -65,42 +62,22 @@ module.exports = {
     ],
   },
   plugins: [
-
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src/public'),
-          to: path.resolve(__dirname, 'dist'),
-          globOptions: {
-            // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
-            ignore: ['**/images/**'],
-          },
+    patterns: [
+      {
+        from: path.resolve(__dirname, 'src/public'),
+        to: path.resolve(__dirname, 'dist'),
+        globOptions: {
+          // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
+          ignore: ['**/images/**'],
         },
-      ],
-    }),
-
-    new CleanWebpackPlugin(),
-    new WorkboxWebpackPlugin.GenerateSW({
-      swDest: './sw.bundle.js',
-      skipWaiting: true,
-      clientsClaim: true,
-      runtimeCaching: [
-        {
-          urlPattern: new RegExp('^https://restaurant-api.dicoding.dev/'),
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'RestaurantCatalogue-V1',
-            cacheableResponse: {
-              statuses: [0, 200],
-            },
-          },
-        },
-      ],
-    }),
+      },
+    ],
+  }),
     new ImageminWebpackPlugin({
       plugins: [
         ImageminMozjpeg({
@@ -109,18 +86,29 @@ module.exports = {
         }),
       ],
     }),
-    new ImageminWebpWebpackPlugin({
-      config: [
-        {
-          test: /\.(jpe?g|png)/,
-          options: {
-            quality: 50,
-          },
-        },
-      ],
-      overrideExtension: true,
-    }),
+    // new WorkboxWebpackPlugin.GenerateSW({
+    //   swDest: './sw.bundle.js',
+    //   runtimeCaching: [
+    //     {
+    //       urlPattern: ({ url }) =>
+    //         url.href.startsWith('https://restaurant-api.dicoding.dev/'),
+    //       handler: 'StaleWhileRevalidate',
+    //       options: {
+    //         cacheName: 'restaurant-api',
+    //       },
+    //     },
+    //     {
+    //       urlPattern: ({ url }) =>
+    //         url.href.startsWith(
+    //           'https://restaurant-api.dicoding.dev/images/medium/',
+    //         ),
+    //       handler: 'StaleWhileRevalidate',
+    //       options: {
+    //         cacheName: 'restaurant-image-api',
+    //       },
+    //     },
+    //   ],
+    // }),
     new BundleAnalyzerPlugin(),
   ],
-
 };
