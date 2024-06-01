@@ -543,7 +543,7 @@ article p {
   height: 50px;
 }
 .path {
-  stroke: #4285f4;
+  stroke: #25f0ac;
   stroke-linecap: round;
   animation: dash 1.5s ease-in-out infinite;
 }
@@ -592,3 +592,4 @@ article p {
   height: auto;
   display: block;
 }
+
