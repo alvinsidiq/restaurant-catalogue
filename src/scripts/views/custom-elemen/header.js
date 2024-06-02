@@ -14,7 +14,7 @@ class Header extends HTMLElement {
       .header {
         display: flex;
         align-items: center;  
-        position: absolute;
+        
         }
     
     .header_title {
@@ -45,7 +45,7 @@ class Header extends HTMLElement {
   
       <header class="header">
       <div tabindex="0" class="header_title">
-      <img src="images/heros/maldis.png" alt="Maldis Resto Logo" class="header_logo">
+      <img  class="header_logo lazyload" data-src="images/heros/maldis.png" alt="Maldis Resto Logo">
         <h1>Maldis Resto </h1>
       </div>
       <button id="menu" class="header__menu">☰</button>
