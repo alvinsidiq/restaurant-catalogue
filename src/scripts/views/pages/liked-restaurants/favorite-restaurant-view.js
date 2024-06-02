@@ -4,13 +4,16 @@ import { createitemrestaurant } from '../../templates/restaurant-content';
 class FavoriteRestaurantView {
   getTemplate() {
     return `
-      <div class="content">
-        <input id="query" type="text">
-        <h2 class="content__heading">Your Liked Restaurant</h2>
+          <div class="content">
+      <h2 class="katalog_label">Your Liked Restaurant</h2>
+      <input id="query" type="text" placeholder="Cari Restaurant Favorite  Anda di sini...">
+
+        
   
-        <div id="restaurants" class="restaurants restaurant-list">
+        <div id="restaurants" class="restaurant-list">
         </div>
       </div>
+      
       
     `;
   }
