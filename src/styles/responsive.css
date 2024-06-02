@@ -177,3 +177,20 @@
     min-width: unset;
   }
 }
+@media screen and (max-width: 600px) {
+  .restaurant-item {
+    max-width: 90%; /* Lebar maksimum menjadi 90% dari lebar layar saat layar kecil */
+  }
+}
+@media (max-width: 768px) {
+  .input-style {
+    font-size: 14px; /* Ukuran font yang lebih kecil untuk perangkat berukuran kecil */
+  }
+}
+
+/* Media query untuk perangkat dengan lebar maksimum 480px */
+@media (max-width: 480px) {
+  .input-style {
+    font-size: 12px; /* Ukuran font yang lebih kecil lagi untuk perangkat berukuran sangat kecil */
+  }
+}
