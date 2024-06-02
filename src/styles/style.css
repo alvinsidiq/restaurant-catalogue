@@ -78,9 +78,7 @@ main {
   width: 100%;
   margin: 0 auto;
 }
-.content {
-  padding: 30px;
-}
+
 
 .katalog {
   width: 100%;
@@ -112,15 +110,23 @@ main {
 
 /* post item */
 .restaurant-item {
-  display: flex; /* Menggunakan flexbox */
-  flex-direction: column; /* Mengatur tata letak vertikal */
-  box-shadow: 0 4px 8px 0 rgb(5, 5, 5);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   overflow: hidden;
-  max-width: 600px;
-  margin: 0 auto; /* Pusatkan div di tengah halaman */
+  max-width: 400px;
+  margin: 0 auto;
   margin-bottom: 20px;
-  transition: background-color 0.3s ease; /* Efek transisi warna latar belakang */
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  border: 3px solid rgba(0, 0, 0, 0.1); /* Menambahkan border */
+}
+
+.restaurant-list {
+  display: flex; /* Menggunakan flexbox */
+  flex-wrap: wrap; /* Mengatur wrapping elemen */
+  justify-content: space-around; /* Menyebarkan ruang secara merata */
 }
 
 .restaurant-item:hover {
@@ -300,6 +306,9 @@ main {
   padding: 5px;
 }
 
+.content{
+  min-height: 50vh; 
+}
 /* Gaya untuk setiap kategori menu */
 .menu_category {
   font-weight: bold;
@@ -543,7 +552,7 @@ article p {
   height: 50px;
 }
 .path {
-  stroke: #4285f4;
+  stroke: #25f0ac;
   stroke-linecap: round;
   animation: dash 1.5s ease-in-out infinite;
 }
@@ -580,6 +589,17 @@ article p {
   border: 1px solid #ccc; /* Berikan garis pinggir */
   border-radius: 5px; /* Atur sudut lengkung */
 }
+/* Gaya umum */
+.input-style {
+  width: 100%; /* Lebar input 100% dari div parent */
+  padding: 10px; /* Berikan ruang tambahan di dalam input */
+  margin-bottom: 15px; /* Berikan ruang antara input dan elemen-elemen berikutnya */
+  box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar total */
+  border: 1px solid #ccc; /* Berikan garis pinggir */
+  border-radius: 5px; /* Atur sudut lengkung */
+}
+
+/* Media query untuk perangkat dengan lebar maksimum 768px */
 
 /* Gaya untuk daftar restoran */
 .hero {
@@ -592,3 +612,4 @@ article p {
   height: auto;
   display: block;
 }
+
