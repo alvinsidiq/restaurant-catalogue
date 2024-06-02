@@ -81,8 +81,8 @@ class Hero extends HTMLElement {
     <div class="content">
     <section class="hero">
       <picture>
-        <source media="(max-width: 600px)" srcset="./images/heros/hero-image_2-large.jpg">
-        <img class="lazyload" src="./images/hero-image_2-large.jpg" alt="Delicious dishes served at our restaurant" />
+        <source media="(max-width: 600px)" srcset="./images/hero-image_2-small.jpg">
+        <img class="lazyload" data-src="./images/hero-image_2-large.jpg" alt="Delicious dishes served at our restaurant" />
       </picture>
     </section>
     
