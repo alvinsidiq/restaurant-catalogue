@@ -13,7 +13,9 @@ class Header extends HTMLElement {
     this._style.textContent = `
       .header {
         display: flex;
-        align-items: center;  }
+        align-items: center;  
+        position: absolute;
+        }
     
     .header_title {
         flex: 1; 
