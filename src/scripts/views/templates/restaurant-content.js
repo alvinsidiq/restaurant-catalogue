@@ -4,8 +4,8 @@ const DetailRestoku = (restaurant) => `
   <div class="container">
     <h2 class="resto-info_name">${restaurant.name}</h2>
     <img
-      class="resto-info_img lazyload"
-      src="${CONFIGURASION.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name}"/>
+      class="resto-info_img lazyload"data-src
+      ="${CONFIGURASION.BASE_IMAGE_URL_MEDIUM + restaurant.pictureId}" alt="${restaurant.name}"/>
     <div class="info">
       <p tabindex="0" class="resto-info_city" >Location: ${restaurant.city}</p>
       <p tabindex="0" class="resto-info_description">${restaurant.description}</p>
@@ -14,7 +14,7 @@ const DetailRestoku = (restaurant) => `
       
         
         <div class="grid-card">
-        <img class="lazyload"src="images/heros/maldis.png" alt="Gambar 2">
+        
         <h2 ="color: rgb(255, 196, 112);">Makanan  </h2>
         <ul class="category_list">
         ${restaurant.menus.foods.map((drink) => `<li>${drink.name}</li>`).join('')}
@@ -23,7 +23,7 @@ const DetailRestoku = (restaurant) => `
       
 
   <div class="grid-card">
-  <img class="lazyload"src="images/heros/maldis.png" alt="Gambar 2">
+ 
   <h2>Minuman</h2>
   <ul class="category_list">
           ${restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
@@ -37,7 +37,7 @@ const DetailRestoku = (restaurant) => `
     .map(
       (review) => `
           <div class="resto_reviews">
-          <img class="lazyload"src="images/heros/maldis.png" alt=""  class="header_logo" >
+          
             <p class="customer">${review.name}</p>
             <p class="review_customer">${review.review}</p>
             <p style ="color: rgb(255, 196, 112);"tabindex="0" class="item_rating">⭐️⭐️⭐️ Rating: ${restaurant.rating}</p>
@@ -56,7 +56,7 @@ const createitemrestaurant = (restaurant) => `
     <img
       tabindex="0"
       class="item_thumbnail lazyload"
-      src="${CONFIGURASION.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" alt="${restaurant.name}"
+      data-src="${CONFIGURASION.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" alt="${restaurant.name}"
     />
     <div class="item_content">
       <p tabindex="0" class="item_rating">⭐️ Rating: ${restaurant.rating}</p>
@@ -64,7 +64,7 @@ const createitemrestaurant = (restaurant) => `
       <p tabindex="0" class="item_description">${restaurant.description}</p>
       <p tabindex="0" class="item_city" >Location: ${restaurant.city}</p>
     </div>
-    <div class="movie-item__content restaurant-info">
+    <div class="item_content restaurant-info">
       <h3 class="restaurant__title" ><a class="interactive-link" href="/#/detail/${restaurant.id}" class="restaurant-title restaurant__title item_title">${restaurant.name || '-'} <span class="restaurant-city">${restaurant.city}</span></a></h3>
      
     </div>
