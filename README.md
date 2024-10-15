@@ -1,49 +1,46 @@
-                                                          Fitur yang harus ada pada aplikasi:
+# Restaurant Catalogue 🍽️
 
-Halaman Utama (Daftar Restoran)
+Temukan restoran favoritmu dan jelajahi kuliner dunia! 🌎
 
-Syarat:
-Menampilkan daftar restoran yang datanya bersumber dari API: restaurant-api.dicoding.dev. Silakan lihat dokumentasinya pada halaman tersebut.
-Wajib menampilkan nama, gambar, dan minimal salah satu di antara kota, rating, dan/atau deskripsi pada restoran.
-Ada tautan/CTA yang mengarah ke detail restoran pada setiap item-nya.
-Hero elemen tetap dipertahankan.
-Halaman Detail Restoran
+![Screenshot Aplikasi](https://github.com/alvinsidiq/restaurant-catalogue/blob/main/src/public/Screenshot%20(77).png)
 
+**Restaurant Catalogue** adalah aplikasi web yang memudahkan kamu untuk mencari dan menemukan restoran-restoran terbaik di sekitarmu.  
 
-Syarat:
-Menampilkan detail dari restoran yang dipilih dari halaman utama (daftar restoran) atau halaman favorit restoran.
-Pada halaman detail restoran harus berisi hal-hal berikut.
-Nama restoran
-Gambar
-Alamat
-Kota 
-Deskripsi
-Menu Makanan
-Menu Minuman
-Customer Reviews
-Ada tombol favorite untuk memasukkan atau menghapus restoran favorit dari database. Penyimpanan ini menggunakan IndexedDB.
-Halaman Daftar Restoran Favorit
+## Fitur Unggulan 🌟
+
+* **Pencarian Restoran:** Temukan restoran berdasarkan nama, jenis makanan, lokasi, atau rating.
+* **Detail Restoran:** Lihat informasi lengkap tentang restoran, termasuk menu, foto, ulasan, jam operasional, dan lokasi di peta.
+* **Filter Restoran:** Filter restoran berdasarkan jenis makanan, harga, rating, dan fasilitas (misalnya, Wi-Fi, parkir,  area  merokok).
+* **Favorit:** Simpan restoran favoritmu agar mudah diakses kembali.
+* **Ulasan dan Rating:** Berikan ulasan dan rating untuk restoran yang pernah kamu kunjungi.
 
 
-Syarat:
-Halaman daftar restoran dapat diakses melalui menu navigasi favorit.
-Menampilkan restoran yang difavoritkan oleh pengguna (data diambil dari indexedDB).
-Wajib menampilkan nama, gambar dan minimal salah satu diantara kota, rating, dan atau deskripsi pada restoran.
-Ada tautan/CTA yang mengarah ke detail restoran pada tiap itemnya.
-Native Capability
+## Demo
 
-Syarat:
-Aplikasi dapat diakses dalam keadaan offline tanpa ada aset yang gagal dimuat, termasuk data yang didapatkan dari API. Anda bebas menggunakan strategi caching apa pun, bahkan menggunakan workbox.
-Aplikasi harus menampilkan icon Add to Home Screen.
-Aplikasi memiliki custom icon yang ditampilkan pada home screen dan splash screen.
-Code Quality
+Lihat demo aplikasi: [https://link-ke-website-kamu](https://restaurantku.netlify.app/)
 
-Syarat:
-Menggunakan ESLint sebagai linter ketika menuliskan kode JavaScript. Harap lampirkan berkas konfigurasi ESLint, ya.
-Menerapkan salah satu style guide, baik Google JavaScript Code Style, AirBnB JavaScript Code Style, atau StandardJS Code Style.
-Periksa kembali sebelum mengirimkan submission project Anda. Penuhi seluruh kriteria yang ditetapkan dalam konfigurasi linter Anda. Kondisi terpenuhinya kriteria ditandai dengan tidak adanya satupun error ketika menjalankan eslint.
-Pertahankan syarat yang ada pada submission sebelumnya. Di antaranya, responsibilitas tampilan, aksesibilitas pada website, appbar, footer, dan sebagainya.
+## Teknologi yang Digunakan 💻
 
+* JavaScript
+* HTML
+* CSS
+* Webpack
+* CodeceptJS 
 
-Catatan:
-Dalam mengerjakan submission ini, Anda tidak diperkenankan menggunakan CSS framework, seperti Bootstrap, Materialize, Tailwind, dll, yang dapat membantu dalam menyusun tampilan yang responsif. Tuliskan kode CSS from scratch. Sistem layouting CSS saat ini sudah cukup kuat dan mantap untuk membuat tampilan website responsif seperti CSS grid.
+##  Pengembangan dan Pengujian 🧪
+
+Proyek ini dikembangkan dengan alur kerja yang profesional, meliputi:
+
+* **Pengujian Otomatis:**  Menggunakan  CodeceptJS  untuk  menjamin  kualitas  kode  dan  fungsionalitas  aplikasi.
+* **Deployment Otomatis:**  Memudahkan  proses  deployment  ke  lingkungan  production.
+
+## Cara Menjalankan 🏃‍♂️
+
+1. **Install dependensi:**
+   ```bash
+   cd restaurant-catalogue
+    npm install
+
+2. **menjalankan Aplikasi**
+   ```bash
+   npm start dev
