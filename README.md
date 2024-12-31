@@ -17,7 +17,7 @@ Temukan restoran favoritmu dan jelajahi kuliner dunia! 🌎
 
 ## Demo
 
-Lihat demo aplikasi: [https://link-ke-website-kamu](https://restaurantku.netlify.app/)
+Lihat demo aplikasi: [https://link-ke-demo-web](https://restaurantku.netlify.app/)
 
 ## Teknologi yang Digunakan 💻
 
